@@ -2,7 +2,7 @@ import React from 'react';
 import LettersDisplay from './lettersDisplay.js'
 import HangmanStatus from './hangmanStatus.js'
 import WordDisplay from './wordDisplay.js'
-import WordList from './wordList.json'
+import WordList from '../../constants/wordList.json'
 
 export default class Hangman extends React.Component{
     constructor(props){
@@ -36,8 +36,16 @@ export default class Hangman extends React.Component{
 
 
     render(){
-        return(
-            <div id='a-hangman-container'>
+
+        const styles = {
+            padding:'.25em',
+            fontSize:70,
+            display:'flex',
+            justifyContent:'center',
+            weight:900
+        }
+
+        const playing = <div id='a-hangman-container'>
                 <div style={{display:'flex', justifyContent:'center'}}>
                     <HangmanStatus
                     stage={this.state.stage}
@@ -52,7 +60,11 @@ export default class Hangman extends React.Component{
                 guessLetter={this.guessLetter}
                 lettersGuessed={this.state.lettersGuessed}
                 />
-            </div>
+            </div>;
+
+        const loss = <p style={styles}>YOU LOSE</p>
+        return(
+            (this.state.stage > 6) ? loss : playing
         );
     }
 }

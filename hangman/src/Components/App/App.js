@@ -1,9 +1,11 @@
 import React from 'react';
-import Hangman from './hangman.js';
+import NavBar from '../NavBar/navBar.js';
 
 function App() {
   return (
-    <Hangman/>
+    <div>
+      <NavBar/>
+    </div>
   );
 }
 
