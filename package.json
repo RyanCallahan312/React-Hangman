@@ -1,5 +1,5 @@
 {
-  "name": "hangman-take-two",
+  "name": "react-hangman",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
