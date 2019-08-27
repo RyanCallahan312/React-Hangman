@@ -1,4 +1,5 @@
 {
+	"homepage": "https://ryancallahan312.github.io/React-Hangman/",
 	"name": "react-hangman",
 	"version": "0.1.0",
 	"private": true,
@@ -8,12 +9,12 @@
 		"react-scripts": "3.0.1"
 	},
 	"scripts": {
+		"predeploy": "yarn run build",
+		"deploy": "gh-pages -b master -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"predeploy": "yarn run build",
-		"deploy": "gh-pages -b master -d build"
+		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
@@ -32,6 +33,5 @@
 	},
 	"devDependencies": {
 		"gh-pages": "^2.1.1"
-	},
-	"homepage": "http://ryancallahan312.github.io/React-Hangman/"
+	}
 }
