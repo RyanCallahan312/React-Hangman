@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "112675e48a695a8c6dec7a98844108c6",
-    "url": "/React-Hangman/index.html"
+    "url": "/React-Hangman/"
   },
   {
     "revision": "790bb00124d8a9a89fb9",

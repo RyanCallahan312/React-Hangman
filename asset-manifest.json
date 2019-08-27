@@ -6,7 +6,7 @@
     "runtime~main.js.map": "/React-Hangman/static/js/runtime~main.44d46a2d.js.map",
     "static/js/2.576a7b83.chunk.js": "/React-Hangman/static/js/2.576a7b83.chunk.js",
     "static/js/2.576a7b83.chunk.js.map": "/React-Hangman/static/js/2.576a7b83.chunk.js.map",
-    "index.html": "/React-Hangman/index.html",
+    "index.html": "/React-Hangman/",
     "precache-manifest.bd4a7f7b21559b48fca98aa3a85c0605.js": "/React-Hangman/precache-manifest.bd4a7f7b21559b48fca98aa3a85c0605.js",
     "service-worker.js": "/React-Hangman/service-worker.js"
   }
