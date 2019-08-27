@@ -10,7 +10,8 @@ export default class LettersDisplay extends React.Component {
 		const liStyles = {
 			padding: '.25em',
 			display: 'inline',
-			fontSize: 30
+			fontSize: 30,
+			userSelect: 'none'
 		};
 
 		const word = this.props.word

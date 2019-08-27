@@ -1,4 +1,4 @@
-import Alphabet from '../../constants/alphabet.json';
+import Alphabet from '../../Constants/alphabet.json';
 
 function guessRandomLetter(lettersRemaining) {
 	let index = Math.floor(Math.random() * lettersRemaining.length);
@@ -10,19 +10,23 @@ function predictLetter(wordList, currentGuess) {
 }
 
 function cullWordList(wordList, letterGuessed, letterIndexes) {
-
 	return wordList.filter(word => {
 		word = word.toUpperCase();
 
 		if (letterIndexes[0] !== -1) {
-			var letterAtIndex = true;
-			letterIndexes.forEach(index => {
-				if (word[index] !== letterGuessed) {
-					letterAtIndex = false;
+			for (let i = 0; i < word.length; i++) {
+				if (
+					word.charAt(i) === letterGuessed &&
+					!letterIndexes.some(index => i === index)
+				) {
+					return false;
 				}
-			});
-			if (letterAtIndex === false) {
-				return false;
+				if (
+					letterIndexes.some(index => i === index) &&
+					word.charAt(i) !== letterGuessed
+				) {
+					return false;
+				}
 			}
 		} else if (
 			letterIndexes[0] === -1 &&
@@ -35,8 +39,8 @@ function cullWordList(wordList, letterGuessed, letterIndexes) {
 }
 
 function insertLetterIfCorrect(letterGuessed, currentGuess, letterIndexes) {
-	if(letterIndexes[0] !== -1){
-		letterIndexes.forEach((index) => {
+	if (letterIndexes[0] !== -1) {
+		letterIndexes.forEach(index => {
 			currentGuess.splice(index, 1, letterGuessed);
 		});
 	}
@@ -55,7 +59,7 @@ function checkForLetterInWord(currentWord, letterGuessed) {
 	if (indexes.length === 0) {
 		indexes.push(-1);
 	}
-	
+
 	return indexes;
 }
 

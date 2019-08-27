@@ -11,24 +11,26 @@ export default class LettersDisplay extends React.Component {
 	}
 
 	render() {
-
 		const styles = {
-			enabled:{
+			enabled: {
 				padding: '.25em',
 				display: 'inline',
 				fontSize: 30,
-				cursor: 'pointer'
+				cursor: 'pointer',
+				userSelect: 'none'
 			},
-			disabled:{
+			disabled: {
 				padding: '.25em',
 				display: 'inline',
 				fontSize: 30,
 				cursor: 'default',
-				color: '#c7c7c7' 
+				color: '#c7c7c7',
+				userSelect: 'none'
 			}
-		}
+		};
 		const letters = this.props.letters.map((letter, index) =>
-			!this.props.lettersGuessed.includes(letter) && this.props.win === null ? (
+			!this.props.lettersGuessed.includes(letter) &&
+			this.props.win === null ? (
 				<li
 					key={index + letter}
 					style={styles.enabled}
@@ -39,10 +41,7 @@ export default class LettersDisplay extends React.Component {
 					{letter}
 				</li>
 			) : (
-				<li
-					key={index + letter}
-					style={styles.disabled}
-				>
+				<li key={index + letter} style={styles.disabled}>
 					{letter}
 				</li>
 			)

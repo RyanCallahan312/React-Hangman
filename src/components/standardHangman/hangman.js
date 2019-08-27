@@ -2,8 +2,8 @@ import React from 'react';
 import LettersDisplay from './lettersDisplay.js';
 import HangmanStatus from './hangmanStatus.js';
 import WordDisplay from './wordDisplay.js';
-import WordList from '../../constants/wordList.json';
-import Alphabet from '../../constants/alphabet.json';
+import WordList from '../../Constants/wordList.json';
+import Alphabet from '../../Constants/alphabet.json';
 
 export default class Hangman extends React.Component {
 	constructor(props) {
@@ -68,7 +68,23 @@ export default class Hangman extends React.Component {
 	render() {
 		const styles = {
 			winMessage: {
-				textAlign: 'center'
+				textAlign: 'center',
+				userSelect: 'none'
+			},
+			button: {
+				margin: 5,
+				height: '3vh',
+				width: '10vw',
+				background: 'rgba(246, 246, 246, 1)',
+				border: '1px solid black',
+				outline: 'none',
+				boxShadow:
+					'0px 1px 2px 1px rgba(0,0,0,0.2), 0px 1px 4px 2px rgba(0,0,0,0.15)',
+				cursor: 'pointer',
+				fontWeight: 800,
+				fontFamily: 'Open Sans',
+				color: 'rgba(0, 138, 250, 1)',
+				userSelect: 'none'
 			}
 		};
 
@@ -88,7 +104,14 @@ export default class Hangman extends React.Component {
 					lettersGuessed={this.state.lettersGuessed}
 					win={this.state.win}
 				/>
-				<button onClick={() => this.resetState()}>Reset Game</button>
+				<div style={{ display: 'flex', justifyContent: 'center' }}>
+					<button
+						onClick={() => this.resetState()}
+						style={styles.button}
+					>
+						Reset Game
+					</button>
+				</div>
 				{this.state.win === true ? (
 					<h1 style={styles.winMessage}>Human Wins</h1>
 				) : (

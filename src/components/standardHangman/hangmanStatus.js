@@ -13,7 +13,8 @@ export default class HangmanStatus extends React.Component {
             width: '2em',
             margin: '0px',
             padding: '0px',
-            lineHeight: '33px'
+            lineHeight: '33px',
+			userSelect: 'none'
 
         }
 
@@ -24,7 +25,8 @@ export default class HangmanStatus extends React.Component {
             margin: '0px',
             padding: '0px',
             lineHeight: '33px',
-            letterSpacing:'-.366em'
+            letterSpacing:'-.366em',
+			userSelect: 'none'
 
         }
 
@@ -35,7 +37,8 @@ export default class HangmanStatus extends React.Component {
             margin: '0px',
             padding: '0px',
             lineHeight: '33px',
-            letterSpacing:'-.366em'
+            letterSpacing:'-.366em',
+			userSelect: 'none'
 
         }
 
