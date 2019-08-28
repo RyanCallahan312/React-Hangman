@@ -24,6 +24,8 @@ export default class hangmanSelector extends React.Component {
 		const styles = {
 			button: {
 				margin: 5,
+				minHeight: '20px',
+				minWidth: '100px',
 				height: '3vh',
 				width: '10vw',
 				background: 'rgba(246, 246, 246, 1)',
@@ -66,7 +68,7 @@ export default class hangmanSelector extends React.Component {
 			</div>
 		);
 		return (
-			<div>
+			<div style={{margin: '2% 0px 0px 0px', width:'100vw'}}>
 				{buttons}
 				{this.state.gameMode === 'standard' ? (
 					<StandardHangman />

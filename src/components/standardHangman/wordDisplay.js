@@ -19,7 +19,8 @@ export default class LettersDisplay extends React.Component {
 			.replace(/[^a-zA-Z0-9-\s]/, '')
 			.split('')
 			.map((letter, index) =>
-				this.props.lettersGuessed.includes(letter) || this.props.win !== null? (
+				this.props.lettersGuessed.includes(letter) ||
+				this.props.win !== null ? (
 					<li key={index + letter} style={liStyles}>
 						{letter}
 					</li>
@@ -38,7 +39,11 @@ export default class LettersDisplay extends React.Component {
 				style={{
 					listStyleType: 'none',
 					display: 'flex',
-					justifyContent: 'center'
+					justifyContent: 'center',
+					width: '100%',
+					height: 'auto',
+					flexWrap: 'wrap',
+					padding: '0'
 				}}
 			>
 				{word}

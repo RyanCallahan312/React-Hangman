@@ -109,6 +109,8 @@ export default class Hangman extends React.Component {
 			},
 			button: {
 				margin: 5,
+				minHeight: '20px',
+				minWidth: '100px',
 				height: '3vh',
 				width: '10vw',
 				background: 'rgba(246, 246, 246, 1)',

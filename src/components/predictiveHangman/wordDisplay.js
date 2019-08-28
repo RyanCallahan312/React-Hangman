@@ -27,9 +27,7 @@ export default class LettersDisplay extends React.Component {
 					<li
 						key={index + letter}
 						style={{ ...liStyles, color: '#c7c7c7' }}
-					>
-                         
-                    </li>
+					/>
 				) : (
 					<li
 						key={index + letter}
@@ -45,7 +43,11 @@ export default class LettersDisplay extends React.Component {
 				style={{
 					listStyleType: 'none',
 					display: 'flex',
-					justifyContent: 'center'
+					justifyContent: 'center',
+					width: '100%',
+					height: 'auto',
+					flexWrap: 'wrap',
+					padding: '0'
 				}}
 			>
 				{word}

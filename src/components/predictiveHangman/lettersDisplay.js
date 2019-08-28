@@ -35,6 +35,10 @@ export default class LettersDisplay extends React.Component {
 						listStyleType: 'none',
 						display: 'flex',
 						justifyContent: 'center',
+						width: '100%',
+						height: 'auto',
+						flexWrap: 'wrap',
+						padding: '0'
 					}}
 				>
 					{letters}
