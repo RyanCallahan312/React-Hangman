@@ -171,6 +171,6 @@ export default class Hangman extends React.Component {
 				)}
 			</div>
 		);
-		return <div>{playing}</div>;
+		return playing;
 	}
 }
