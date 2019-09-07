@@ -6,4 +6,4 @@ Standard is where the computer thinks of a word and the user tries to guess it.
 
 Predicitive is where the user thinks of a word and the computer tries to guess it.
 
-Hosted at ryancallahan312.github.io/React-Hangman/
+Hosted at https://ryancallahan312.github.io/React-Hangman/
