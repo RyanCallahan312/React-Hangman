@@ -1,3 +1,5 @@
+# React Hangman
+
 This is a Hangman game made with React.
 
 It has two modes, standard and predicitve.
