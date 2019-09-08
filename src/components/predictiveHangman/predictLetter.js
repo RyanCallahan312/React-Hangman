@@ -1,4 +1,4 @@
-import Alphabet from '../../Constants/alphabet.json';
+import Alphabet from '../../constants/alphabet.json';
 
 function guessRandomLetter(lettersRemaining) {
 	let index = Math.floor(Math.random() * lettersRemaining.length);

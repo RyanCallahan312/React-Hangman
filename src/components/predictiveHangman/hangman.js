@@ -1,8 +1,8 @@
 import React from 'react';
 import HangmanStatus from './hangmanStatus.js';
 import WordDisplay from './wordDisplay.js';
-import InitalWordList from '../../Constants/wordList.json';
-import Alphabet from '../../Constants/alphabet.json';
+import InitalWordList from '../../constants/wordList.json';
+import Alphabet from '../../constants/alphabet.json';
 import LettersDisplay from './lettersDisplay.js';
 import PredictLetter from './predictLetter.js';
 

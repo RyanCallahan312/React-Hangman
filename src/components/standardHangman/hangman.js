@@ -2,8 +2,8 @@ import React from 'react';
 import LettersDisplay from './lettersDisplay.js';
 import HangmanStatus from './hangmanStatus.js';
 import WordDisplay from './wordDisplay.js';
-import WordList from '../../Constants/wordList.json';
-import Alphabet from '../../Constants/alphabet.json';
+import WordList from '../../constants/wordList.json';
+import Alphabet from '../../constants/alphabet.json';
 
 export default class Hangman extends React.Component {
 	constructor(props) {
